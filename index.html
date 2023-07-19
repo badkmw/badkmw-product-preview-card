@@ -1,73 +1,81 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
+
 <head>
-	<meta charset = "UTF-8">
-	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- displays site properly based on user's device -->
 
-	<link rel = "icon" type = "image/png" sizes = "32x32" href = "./images/favicon-32x32.png">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<link rel = "stylesheet" href = "styles.css">
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+		integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />-->
+	<link rel="stylesheet" href="styles.css">
 
 	<title>Frontend Mentor | Product preview card component</title>
 
 </head>
+
 <body>
-<main>
-	<section class = "posterImage">
-		<img id = "imgPoster" src = "images/image-product-desktop.jpg" alt = "Image Product">
-	</section>
-	<section class = "posterInfo">
-		<p class = "firstTitle">Perfume</p>
-		<h1 class = "secondTitle">Gabrielle Essence Eau De Parfum</h1>
+	<main>
+		<section class="posterImage">
+			<picture>
+				<source srcset="images/image-product-desktop.jpg" media="(min-width:578px)">
+				<img id="imgPoster" src="images/image-product-mobile.jpg" alt="Image Product">
+			</picture>
+		</section>
+		<section class="posterInfo">
+			<p class="firstTitle">Perfume</p>
+			<h1 class="secondTitle">Gabrielle Essence Eau De Parfum</h1>
 
-		<p class = "description">A floral, solar and voluptuous interpretation composed by Olivier
-		                         Polge,
-		                         Perfumer-Creator for the House of CHANEL.</p>
+			<p class="description">A floral, solar and voluptuous interpretation composed by Olivier
+				Polge,
+				Perfumer-Creator for the House of CHANEL.</p>
 
-		<article class = "price">
-			<h1>$149.99</h1>
-			<small>$169.99</small>
-		</article>
+			<article class="price">
+				<h1>$149.99</h1>
+				<small>$169.99</small>
+			</article>
 
-		<button class = "cartBtn">
-			<img src = "images/icon-cart.svg" alt = "Cart Icon">
-			<p>Add to Cart</p>
-		</button>
-	</section>
+			<button class="cartBtn">
+				<img src="images/icon-cart.svg" alt="Cart Icon">
+				<p>Add to Cart</p>
+			</button>
+		</section>
 
-</main>
+	</main>
 
 
-<div class = "attribution">
-	Challenge by <a href = "https://www.frontendmentor.io?ref=challenge" target = "_blank">Frontend
-	                                                                                       Mentor</a>.
-	Coded by <a href = "https://www.frontendmentor.io/profile/badkmw">badkmw</a>.
-</div>
+	<div class="attribution">
+		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
+			Mentor</a>.
+		Coded by <a href="https://www.frontendmentor.io/profile/badkmw">badkmw</a>.
+	</div>
 
-<script defer>
+	<!--<script defer>
 
-    document.addEventListener("DOMContentLoaded", function () {
+		document.addEventListener("DOMContentLoaded", function () {
 
-        let imgChange = document.getElementById('imgPoster');
-        let srcDesktop = "images/image-product-desktop.jpg";
-        let srcMobile = "images/image-product-mobile.jpg";
-        let myWidth = 578;
+			let imgChange = document.getElementById('imgPoster');
+			let srcDesktop = "images/image-product-desktop.jpg";
+			let srcMobile = "images/image-product-mobile.jpg";
+			let myWidth = 578;
 
-        //params: theElement, theFirstSrc, theSecondSrc
-        function changeSrc(width, theElement, theFirstSrc, theSecondSrc) {
-            if (window.innerWidth < width) {
-                theElement.src = theSecondSrc;
-            } else {
-                theElement.src = theFirstSrc;
-            }
-        }
+			//params: theElement, theFirstSrc, theSecondSrc
+			function changeSrc(width, theElement, theFirstSrc, theSecondSrc) {
+				if (window.innerWidth < width) {
+					theElement.src = theSecondSrc;
+				} else {
+					theElement.src = theFirstSrc;
+				}
+			}
 
-        window.addEventListener('resize', function () {
-            changeSrc(myWidth, imgChange, srcDesktop, srcMobile);
-        });
+			window.addEventListener('resize', function () {
+				changeSrc(myWidth, imgChange, srcDesktop, srcMobile);
+			});
 
-    });
-</script>
+		});
+	</script>-->
 </body>
+
 </html>
